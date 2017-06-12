@@ -84,7 +84,11 @@ Date Object
 //   console.assert(todayIs == today, "#3 Test failed. Did you set the date correctly?");
 // })(testerOne);
 
-
+(function(testerOne){
+  "use strict";
+  var todayIs = new Date();
+  console.assert(todayIs.toString() == (new Date).toString(), "#3 Test failed. Did you set the date correctly?");
+})();
 
 
 
@@ -155,7 +159,13 @@ Date object
 // })(testerTwo);
 //
 
-
+(function(testerTwo){
+  "use strict";
+  var today = new Date();
+  var stringDate = today.getDate();
+  console.log("#6 stringDate", stringDate)
+  console.assert(stringDate == today.toString(), "#6 Test Failed. Did you set stringDate correctly?")
+})();
 
 
 
